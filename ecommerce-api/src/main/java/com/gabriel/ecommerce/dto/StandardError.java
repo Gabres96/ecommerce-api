@@ -1,4 +1,4 @@
-package com.gabriel.ecommerce.entities.dto;
+package com.gabriel.ecommerce.dto;
 
 public class StandardError implements java.io.Serializable {
     private static final long serialVersionUID = 1L;

@@ -1,6 +1,6 @@
 package com.gabriel.ecommerce.controllers.handlers;
 
-import com.gabriel.ecommerce.entities.dto.StandardError;
+import com.gabriel.ecommerce.dto.StandardError;
 import com.gabriel.ecommerce.services.exceptions.ResourceNotFoundException;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.http.HttpStatus;

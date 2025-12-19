@@ -1,11 +1,13 @@
 package com.gabriel.ecommerce.controllers;
 
-import com.gabriel.ecommerce.entities.Product;
+import com.gabriel.ecommerce.dto.ProductDTO;
 import com.gabriel.ecommerce.services.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import java.net.URI;
 import java.util.List;
 
 @RestController
@@ -16,14 +18,34 @@ public class ProductController {
     private ProductService service;
 
     @GetMapping
-    public ResponseEntity<List<Product>> findAll() {
-        List<Product> list = service.findAll();
+    public ResponseEntity<List<ProductDTO>> findAll() {
+        List<ProductDTO> list = service.findAll();
         return ResponseEntity.ok(list);
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Product> findById(@PathVariable Long id) {
-        Product product = service.findById(id);
-        return ResponseEntity.ok(product);
+    public ResponseEntity<ProductDTO> findById(@PathVariable Long id) {
+        ProductDTO dto = service.findById(id);
+        return ResponseEntity.ok(dto);
+    }
+
+    @PostMapping
+    public ResponseEntity<ProductDTO> insert(@RequestBody ProductDTO dto) {
+        dto = service.insert(dto);
+        URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}")
+                .buildAndExpand(dto.getId()).toUri();
+        return ResponseEntity.created(uri).body(dto);
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<ProductDTO> update(@PathVariable Long id, @RequestBody ProductDTO dto) {
+        dto = service.update(id, dto);
+        return ResponseEntity.ok(dto);
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> delete(@PathVariable Long id) {
+        service.delete(id);
+        return ResponseEntity.noContent().build();
     }
 }
