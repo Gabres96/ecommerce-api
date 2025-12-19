@@ -1,43 +1,44 @@
-# Ecommerce API 🛒 
+# Ecommerce API 🛒
 
 ## 📝 Sobre o Projeto
-Esta é uma API REST desenvolvida em Java e Spring Boot para gerenciar o catálogo de um sistema de E-commerce. O projeto foi construído para fornecer uma base sólida, escalável e segura para a gestão de produtos e suas respectivas categorias.
+Esta é uma API REST completa desenvolvida em Java e Spring Boot para o gerenciamento de um ecossistema de E-commerce. A aplicação foi projetada para ser o motor de uma loja virtual, permitindo o controle total sobre o catálogo de produtos e suas categorias, garantindo integridade de dados e respostas padronizadas.
 
-Atualmente, a API serve como o "coração" (backend) de uma loja virtual, permitindo a organização de itens e garantindo que os dados sejam entregues de forma rápida e estruturada.
+O projeto demonstra o uso de tecnologias modernas e padrões de arquitetura de software exigidos pelo mercado, com foco em **testes automatizados** e **manutenibilidade**.
 
-## ✨ O que é possível fazer (Funcionalidades)
-Atualmente, a API permite as seguintes operações:
+## ✨ Funcionalidades (CRUD Completo)
+A API expõe todos os recursos necessários para uma gestão eficiente:
 
 ### 📦 Gestão de Produtos
-- **Listar Catálogo:** Recuperar todos os produtos cadastrados.
-- **Consulta por ID:** Buscar detalhes específicos de um único produto.
-- **Associação:** Cada produto é vinculado a uma categoria específica (ex: Consoles, Livros).
+- **Listar Catálogo:** Recuperação de todos os produtos com seus respectivos dados e categorias.
+- **Consulta por ID:** Busca detalhada de um produto específico.
+- **Inserir Novo Produto:** Cadastro de itens com validação de campos.
+- **Atualizar Produto:** Edição de informações de produtos existentes.
+- **Remover Produto:** Exclusão segura de itens do catálogo.
 
 ### 🏷️ Gestão de Categorias
-- **Listar Categorias:** Recuperar todas as categorias existentes para organizar o menu da loja.
+- **Listar Categorias:** Visualização de todas as categorias disponíveis para organização do estoque.
 
 ## 🛠 Tecnologias Utilizadas
 - **Java 21** (LTS)
 - **Spring Boot 3.4.1**
 - **Spring Data JPA** (Persistência e ORM)
-- **H2 Database** (Banco de dados em memória para testes e agilidade no dev)
-- **JUnit 5 & Mockito** (Suíte completa de testes automatizados)
-- **Maven** (Gerenciador de dependências e build)
+- **H2 Database** (Banco de dados em memória para agilidade em desenvolvimento)
+- **JUnit 5 & Mockito** (Suíte robusta de testes unitários e integração)
+- **Maven** (Gerenciador de dependências)
 
-## 🏗 Arquitetura do Sistema
-A aplicação segue o padrão de camadas para facilitar a manutenção e evolução:
-1. **Controllers:** Porta de entrada (Endpoints) que recebe as requisições HTTP.
-2. **Services:** Onde a "mágica" acontece (Lógica de negócio e regras).
-3. **Repositories:** Comunicação direta e segura com o banco de dados.
-4. **Handlers:** Captura de erros global para garantir que a API nunca "trave" e sempre responda mensagens claras ao usuário.
+## 🏗 Arquitetura e Boas Práticas
+A aplicação foi construída sobre pilares sólidos:
+- **Padrão Camadas:** Separação clara entre `Controller`, `Service` e `Repository`.
+- **Tratamento de Exceções Global:** Sistema de captura de erros que garante respostas JSON amigáveis e códigos HTTP corretos (ex: 404 para Não Encontrado, 400 para Erro de Sintaxe).
+- **DTO (Data Transfer Object):** Utilização de objetos de transferência para segurança e performance no tráfego de dados.
 
-## 🧪 Qualidade e Testes
-Este projeto diferencia-se pela sua robusta cobertura de testes:
-- **Testes de Unidade:** Validam as regras de negócio isoladamente.
-- **Testes de Integração:** Validam se os Endpoints estão entregando o JSON correto.
-- **Testes de Repositório:** Validam se os dados estão sendo salvos e buscados corretamente no banco de dados.
+## 🧪 Qualidade Garantida (Testes)
+A confiabilidade do sistema é assegurada por:
+- **Testes de Unidade:** Validação de regras de negócio em isolamento.
+- **Testes de Integração:** Testes de ponta a ponta nos endpoints da API.
+- **Testes de Repositório:** Garantia de que a persistência no banco de dados está operando conforme o esperado.
 
-## 📝 Como Executar
+## 📝 Como Executar o Projeto
 1. Clone o repositório:
    ```bash
    git clone [https://github.com/Gabres96/ecommerce-api.git](https://github.com/Gabres96/ecommerce-api.git)
