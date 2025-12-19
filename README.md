@@ -28,7 +28,6 @@ A aplicação conta com uma cobertura abrangente de testes:
 1. Clone o repositório:
    ```bash
    git clone [https://github.com/Gabres96/ecommerce-api.git](https://github.com/Gabres96/ecommerce-api.git)
-   Instale as dependências e execute a aplicação:
 
 2. instale as dependências e execute a aplicação:
 ./mvnw spring-boot:run
