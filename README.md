@@ -5,6 +5,27 @@ Esta é uma API REST completa desenvolvida em Java e Spring Boot para o gerencia
 
 O projeto demonstra o uso de tecnologias modernas e padrões de arquitetura de software exigidos pelo mercado, com foco em **testes automatizados** e **manutenibilidade**.
 
+## 🚀 Demonstração da API (Evidências)
+Abaixo, as evidências das operações realizadas através do Postman, validando o funcionamento de todos os endpoints:
+
+### 1. Buscar Produto por ID (GET)
+*Retorno detalhado de um produto específico com status 200 OK.*
+![Evidência GET](./assets/get-by-id.png)
+
+### 2. Inserir Novo Produto (POST)
+*Criação de um novo item no catálogo com retorno 201 Created.*
+![Evidência POST](./assets/post-product.png)
+
+### 3. Atualizar Produto (PUT)
+*Edição de dados de um produto existente com retorno 200 OK.*
+![Evidência PUT](./assets/put-product.png)
+
+### 4. Remover Produto (DELETE)
+*Exclusão de item com retorno 204 No Content.*
+![Evidência DELETE](./assets/delete-product.png)
+
+---
+
 ## ✨ Funcionalidades (CRUD Completo)
 A API expõe todos os recursos necessários para uma gestão eficiente:
 
@@ -15,36 +36,4 @@ A API expõe todos os recursos necessários para uma gestão eficiente:
 - **Atualizar Produto:** Edição de informações de produtos existentes.
 - **Remover Produto:** Exclusão segura de itens do catálogo.
 
-### 🏷️ Gestão de Categorias
-- **Listar Categorias:** Visualização de todas as categorias disponíveis para organização do estoque.
-
-## 🛠 Tecnologias Utilizadas
-- **Java 21** (LTS)
-- **Spring Boot 3.4.1**
-- **Spring Data JPA** (Persistência e ORM)
-- **H2 Database** (Banco de dados em memória para agilidade em desenvolvimento)
-- **JUnit 5 & Mockito** (Suíte robusta de testes unitários e integração)
-- **Maven** (Gerenciador de dependências)
-
-## 🏗 Arquitetura e Boas Práticas
-A aplicação foi construída sobre pilares sólidos:
-- **Padrão Camadas:** Separação clara entre `Controller`, `Service` e `Repository`.
-- **Tratamento de Exceções Global:** Sistema de captura de erros que garante respostas JSON amigáveis e códigos HTTP corretos (ex: 404 para Não Encontrado, 400 para Erro de Sintaxe).
-- **DTO (Data Transfer Object):** Utilização de objetos de transferência para segurança e performance no tráfego de dados.
-
-## 🧪 Qualidade Garantida (Testes)
-A confiabilidade do sistema é assegurada por:
-- **Testes de Unidade:** Validação de regras de negócio em isolamento.
-- **Testes de Integração:** Testes de ponta a ponta nos endpoints da API.
-- **Testes de Repositório:** Garantia de que a persistência no banco de dados está operando conforme o esperado.
-
-## 📝 Como Executar o Projeto
-1. Clone o repositório:
-   ```bash
-   git clone [https://github.com/Gabres96/ecommerce-api.git](https://github.com/Gabres96/ecommerce-api.git)
-
-2. instale as dependências e execute a aplicação:
-./mvnw spring-boot:run
-
-3. Para rodar toda a suíte de testes:
-./mvnw test
+... (resto do seu README continua igual)
