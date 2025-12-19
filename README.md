@@ -10,19 +10,19 @@ Abaixo, as evidências das operações realizadas através do Postman, validando
 
 ### 1. Buscar Produto por ID (GET)
 *Retorno detalhado de um produto específico com status 200 OK.*
-![Evidência GET](./assets/get-by-id.png)
+![Evidência GET](get-by-id.png)
 
 ### 2. Inserir Novo Produto (POST)
 *Criação de um novo item no catálogo com retorno 201 Created.*
-![Evidência POST](./assets/post-product.png)
+![Evidência POST](post-product.png)
 
 ### 3. Atualizar Produto (PUT)
 *Edição de dados de um produto existente com retorno 200 OK.*
-![Evidência PUT](./assets/put-product.png)
+![Evidência PUT](put-product.png)
 
 ### 4. Remover Produto (DELETE)
 *Exclusão de item com retorno 204 No Content.*
-![Evidência DELETE](./assets/delete-product.png)
+![Evidência DELETE](delete-product.png)
 
 ---
 
