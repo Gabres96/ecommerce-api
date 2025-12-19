@@ -30,11 +30,8 @@ A aplicação conta com uma cobertura abrangente de testes:
    git clone [https://github.com/Gabres96/ecommerce-api.git](https://github.com/Gabres96/ecommerce-api.git)
    Instale as dependências e execute a aplicação:
 
-Bash
-
+2. instale as dependências e execute a aplicação:
 ./mvnw spring-boot:run
-Para rodar toda a suíte de testes:
 
-Bash
-
+3. Para rodar toda a suíte de testes:
 ./mvnw test
